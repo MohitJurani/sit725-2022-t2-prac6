@@ -16,49 +16,34 @@ app.use('/api/projects',projectRoutes)
 
 app.use('/api/user',userRoute)
 
-//add database connection...
-// const uri = "mongodb+srv://jurani_mohit:SIT725@sit725.tc86ncg.mongodb.net/?retryWrites=true&w=majority";
-// const MongoClient = require('mongodb').MongoClient
-// const client = new MongoClient(uri, {useNewUrlParser: true})
+app.get('/addNumber/:n1/:n2', function(request, response){
+    response.json({statusCode: 200});
+    response.sendStatus(200);
+})
 
+app.get('/addTwoStrings/a/b', function(req,res,next){
+    var firstNumber = req.params.firstNumber
+    var secondNumber = req.params.secondNumber
+    var result = firstNumber + secondNumber || null
+    if(result == null) {
+        res.json({result: result, statusCode: 400}).status(400)
+        }
+      else { res.json({result: result, statusCode: 200}).status(200) } 
+    })
+    
 
-//create collection....
-// const createCollection = () => {
-//     client.connect((err) => {
-//         projectCollection =  client.db().collection("RegistrationData");
-//         if(!err) {
-//             console.log('MongoDB Connected');
-//         }
-//         else {
-//             console.log("DB Error: ", err);
-//             process.exit(1);
-//         }
-//     })
-// }
-
-// //insert project......
-// const insertProjects = (project, callback) => {
-//     projectCollection.insert(project,callback);
-// }
-
-// // post api....
-// app.post('/api/projects',(req,res) => {
-//     console.log("New Project added", req.body);
-
-//     var newProject = req.body;
-//     insertProjects(newProject,(err,result) => {
-//         if(err) {
-//             res.json({statusCode: 400, message: err});
-//         }
-//         else {
-//             res.json({statusCode: 200, message:"Project Successfully added", data: result});
-//         }
-//     })
-// })
-
+app.get('/addTwoNumbers/:firstNumber/:secondNumber', function(req,res,next){
+    var firstNumber = parseInt(req.params.firstNumber)
+    var secondNumber = parseInt(req.params.secondNumber)
+    var result = firstNumber + secondNumber || null
+    if(result == null) {
+        res.json({result: result, statusCode: 400}).status(400)
+        }
+      else { res.json({result: result, statusCode: 200}).status(200) } 
+    })
+    
 var port = process.env.port || 3000;
 
 app.listen(port,()=>{
     console.log("App listening to: "+port);
-    // createCollection();
 })
