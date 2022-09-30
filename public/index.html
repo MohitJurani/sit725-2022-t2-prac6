@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIT 725 Prac 3</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom Style Sheet-->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Orders</a></li>
+        <li><a href="#!">Customer Care</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Profile</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">BRLinen</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Comforters</a></li>
+            <li><a href="badges.html">Bedsheets</a></li>
+            <li><a href="badges.html"></a>Quilts and Covers</li>
+            <!-- Dropdown Trigger -->
+                  <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i
+                      class="material-icons left">auto_fix_high</i>Register</a>
+            <!-- <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Profile Name<i class="material-icons right">arrow_drop_down</i></a></li> -->
+          </ul>
+        </div>
+      </nav>
+    <main class="main-body">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1 id="heading">BedRoomLinen</h1>
+            <p class="flow-text">Providing quality products to suit your decor</p>
+          </div>
+          <div class="carousel">
+            <img height = "400" class = "carousel-item" src="https://images.unsplash.com/photo-1544947892-d6d2af87a2ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" />
+            <img height = "400" class = "carousel-item" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" />
+            <img height = "400" class = "carousel-item" src="https://images.unsplash.com/photo-1559841644-08984562005a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80" />
+            <img height = "400" class = "carousel-item" src="https://images.unsplash.com/photo-1638878468165-a974415fed4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" />
+            <img height = "400" class = "carousel-item" src="https://www.beautifulhomes.com/content/dam/beautifulhomes/images/202011/a-guide-to-buying-quilts-comforters-blankets-for-any-temperature/Title-Himeya-DUVET-PILLOW.jpg" />
+            <img height = "400" class = "carousel-item" src="https://media.spaces.in/media/catalog/product/1/0/1059239-1.jpg" />
+            <img height = "400" class = "carousel-item" src="https://wakefitdev.gumlet.io/img/reversible-comforters/brown-beige/2.jpg?w=732" />
+            <img height = "400" class = "carousel-item" src="https://www.jaipurfabric.com/uploads/jaipurfabric/articles/comforter-banner-1-525719l-199853_l.jpg" />
+          </div>
+     
+        </div>
+
+        <div class = "cards-section">
+        </div>     
+      </div>
+      <!-- Modal Structure continues on next slide-->
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="row modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 center-align">
+                <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
